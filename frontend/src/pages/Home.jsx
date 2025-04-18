@@ -1,5 +1,6 @@
 import React from "react";
 import FeaturedProducts from "../components/FeaturedProducts";
+import { Typewriter } from 'react-simple-typewriter'
 
 const Home = () => {
   return (
@@ -22,14 +23,35 @@ const Home = () => {
         <h1 className="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-pink-400 via-purple-700 to-indigo-800 text-transparent bg-clip-text">
           Welcome to Kartzilla
         </h1>
-        <p className="text-lg md:text-2xl mb-6">Shop Smart. Shop Everything.</p>
-        <button className="bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition duration-300">
-          Shop Now
-        </button>
+
+        <h1 className="text-3xl font-bold text-purple-950">
+          <Typewriter
+            words={['Shop Smart', 'Deals You Love', 'Fashion That Speaks']}
+            loop={0}
+            cursor
+            cursorStyle="_"
+            typeSpeed={70}
+            deleteSpeed={50}
+            delaySpeed={1500}
+          />
+        </h1>
+
+        <div className="flex justify-center gap-4 mt-6 flex-wrap">
+  <button className="bg-transparent border border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 hover:text-purple-600 transition duration-300">
+    Shop Now
+  </button>
+  <a
+    href="#categories"
+    className="bg-transparent border border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-600 transition duration-300"
+  >
+    Explore More ↓
+  </a>
+</div>
+
       </section>
 
       {/* 🧭 Categories */}
-      <section className="py-12 px-4">
+      <section id="categories" className="py-12 px-4">
         <h2 className="text-2xl md:text-3xl font-bold text-center mb-8">Categories</h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 max-w-6xl mx-auto">
           {["Electronics", "Fashion", "Grocery", "Accessories"].map((cat, idx) => (
@@ -45,7 +67,8 @@ const Home = () => {
       </section>
 
       {/* ⭐ Featured Products */}
-        <FeaturedProducts/>
+      <FeaturedProducts />
+
       {/* 📬 Newsletter Signup */}
       <section className="py-12 px-4 bg-purple-100">
         <div className="max-w-xl mx-auto text-center">
