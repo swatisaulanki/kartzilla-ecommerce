@@ -11,6 +11,12 @@ import Categories from './pages/Categories';
 import CategoryPage from './pages/CategoryPage ';
 import BlogPage from './pages/BlogPage';
 import Offer from './pages/Offer';
+import AboutUs from './pages/AboutUs';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import FaqPage from './pages/FaqPage';
+import Contact from './pages/Contact';
+import ReturnPolicy from './pages/ReturnPolicy ';
+import TermsAndConditions from './pages/TermsAndConditions ';
 
 const App = () => {
   return (
@@ -26,6 +32,12 @@ const App = () => {
         <Route path="/account" element={<Account />} />
         <Route path="/orders" element={<Orders />} />
         <Route path="/offers" element={<Offer/>} />
+        <Route path="/about" element={<AboutUs/>} />
+        <Route path="/privacy" element={<PrivacyPolicy/>} />
+        <Route path="/faqpage" element={<FaqPage/>} />
+        <Route path="/contact" element={<Contact/>} />
+        <Route path="/returns" element={<ReturnPolicy/>} />
+        <Route path="/terms" element={<TermsAndConditions/>} />
 
       </Routes>
       <Footer />
