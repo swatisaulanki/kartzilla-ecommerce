@@ -1,4 +1,3 @@
-// src/components/FeaturedCarousel.jsx
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination } from "swiper/modules";
@@ -14,7 +13,7 @@ const products = [
     category: "Clothing",
     description: "Comfortable and stylish cotton t-shirt for everyday wear.",
     price: 499,
-    image: "https://images.unsplash.com/photo-1541099649105-f69ad21f3246",
+    image: "https://images-cdn.ubuy.ae/64f68464c4e480173115d1b8-billionhats-12-pack-plus-size-men-cotton.jpg",
   },
   {
     id: 2,
@@ -22,7 +21,7 @@ const products = [
     category: "Electronics",
     description: "Bluetooth headphones with high-quality sound and long battery life.",
     price: 1599,
-    image: "https://images.unsplash.com/photo-1580894908361-967195033215",
+    image: "https://static.independent.co.uk/2024/10/30/12/Wireless-headphones.jpg?width=1200&height=900&fit=crop",
   },
   {
     id: 3,
@@ -30,7 +29,7 @@ const products = [
     category: "Kitchen",
     description: "Durable non-stick frying pan for everyday cooking.",
     price: 799,
-    image: "https://images.unsplash.com/photo-1584270354949-1b1a74fd84c9",
+    image: "https://m.media-amazon.com/images/I/71xOErYhWwL.jpg",
   },
   {
     id: 4,
@@ -38,7 +37,7 @@ const products = [
     category: "Home",
     description: "Stylish LED desk lamp with adjustable brightness.",
     price: 999,
-    image: "https://images.unsplash.com/photo-1602526218250-098fbd57c8e0",
+    image: "https://www.lepower-tec.com/cdn/shop/files/lepower-tec-desk-lamp-for-office-black.jpg?v=1722496317&width=1600",
   },
   {
     id: 5,
@@ -46,7 +45,7 @@ const products = [
     category: "Fitness",
     description: "Non-slip yoga mat perfect for workouts and stretching.",
     price: 699,
-    image: "https://images.unsplash.com/photo-1605296867304-46d5465a13f1",
+    image: "https://images.unsplash.com/photo-1605296867304-46d5465a13f1?crop=entropy&cs=tinysrgb&fit=max&q=80&w=1080",
   },
   {
     id: 6,
@@ -54,7 +53,7 @@ const products = [
     category: "Electronics",
     description: "Track fitness and stay connected with this stylish smart watch.",
     price: 2599,
-    image: "https://images.unsplash.com/photo-1603791440384-56cd371ee9a7",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFungyiT18qscuHL0ArhJVxjNpr-zySy1vjQ&s",
   },
   {
     id: 7,
@@ -62,7 +61,7 @@ const products = [
     category: "Kitchen",
     description: "High-quality stainless steel kitchen knife set.",
     price: 1299,
-    image: "https://images.unsplash.com/photo-1611078489935-eee28c088234",
+    image: "https://pyxis.nymag.com/v1/imgs/ecf/a00/580034ece9e907261653e86bc0f166eb8d.rdeep-vertical.w245.jpg",
   },
   {
     id: 8,
@@ -70,7 +69,7 @@ const products = [
     category: "Electronics",
     description: "Compact and powerful Bluetooth speaker.",
     price: 1199,
-    image: "https://images.unsplash.com/photo-1581291518586-01c24c720b9e",
+    image: "https://cpimg.tistatic.com/06727102/b/4/Bluei-Rocker-R1-High-Bass-5-0-Bluetooth-Version-with-Built-in-FM-Radio-Aux-input-Call-Function-SD-Card-Support-Portable-Bluetooth-Speaker.jpg",
   },
 ];
 
@@ -88,7 +87,7 @@ export default function FeaturedCarousel() {
           <FaChevronRight />
         </div>
 
-        {/* HIDE the pagination dots with inline style */}
+        {/* Hide pagination dots */}
         <style>
           {`
             .swiper-pagination {
@@ -115,7 +114,7 @@ export default function FeaturedCarousel() {
             <SwiperSlide key={product.id}>
               <div className="bg-white rounded-lg shadow-md p-4 h-full flex flex-col justify-between hover:shadow-lg transition-all duration-300">
                 <img
-                  src={`${product.image}?w=400&h=300&fit=crop`}
+                  src={product.image}
                   alt={product.title}
                   className="w-full h-48 object-cover rounded-md mb-4"
                 />
@@ -131,13 +130,13 @@ export default function FeaturedCarousel() {
           ))}
         </Swiper>
       </div>
-            {/* Explore More Button */}
-            <div className="mt-10 text-center">
+
+      {/* Explore More Button */}
+      <div className="mt-10 text-center">
         <button className="bg-purple-600 text-white py-2 px-6 rounded-lg hover:bg-purple-700 transition duration-300">
           Explore More
         </button>
       </div>
-
     </section>
   );
 }

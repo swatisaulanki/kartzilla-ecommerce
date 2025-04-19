@@ -1,6 +1,7 @@
 import React from "react";
 import FeaturedProducts from "../components/FeaturedProducts";
 import { Typewriter } from 'react-simple-typewriter'
+import Faq from "../components/Faq";
 
 const Home = () => {
   return (
@@ -86,6 +87,8 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      <Faq/>
     </div>
   );
 };

@@ -10,6 +10,7 @@ import ShopNow from './pages/ShopNow';
 import Categories from './pages/Categories';
 import CategoryPage from './pages/CategoryPage ';
 import BlogPage from './pages/BlogPage';
+import Offer from './pages/Offer';
 
 const App = () => {
   return (
@@ -24,6 +25,8 @@ const App = () => {
         <Route path="/cart" element={<Cart />} />
         <Route path="/account" element={<Account />} />
         <Route path="/orders" element={<Orders />} />
+        <Route path="/offers" element={<Offer/>} />
+
       </Routes>
       <Footer />
     </>
